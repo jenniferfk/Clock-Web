@@ -1,0 +1,617 @@
+<html>
+    <head><title> Clock Site</title>
+      <link rel="stylesheet" type="text/css" href="Clock app css.css">
+      
+
+    </head>
+    <body><header>
+        <h1> Clock Site </h1>
+        
+        <nav>
+            <ul>  
+                <li>  
+                <a href="world clock.html"> World Clock </a>  
+                </li>  
+                  
+                <li>  
+                <a href="stopwatch.html"> Stopwatch </a>  
+                </li>  
+                <li> <a href="timer.html">  Timer </a>  
+                </li>    
+                </ul>  
+                </nav>  
+        </nav>
+        </header>
+        <form>
+            <div class="custom-select">
+                <label>Search for your country by Capital</label>
+            <input type="text" class="select-input" placeholder="Search" oninput="filterOptions()">
+        <div class="select-dropdown" id="country" name="country" onChange=timezone()>
+              
+                <div class="select-option"id='Africa/Abidjan'>Africa/Abidjan</div>
+                <div class="select-option"id='Africa/Addis_Ababa'>Africa/Addis_Ababa</div>
+                <div class="select-option"id='Africa/Accra'>Africa/Accra</div>
+                <div class="select-option"id='Africa/Algiers'>Africa/Algiers</div>
+                <div class="select-option"id='Africa/Asmara'>Africa/Asmara</div>
+                <div class="select-option"id='Africa/Asmera'>Africa/Asmera</div>
+                <div class="select-option"id='Africa/Bamako'>Africa/Bamako</div>
+                <div class="select-option"id='Africa/Bangui'>Africa/Bangui</div>
+                <div class="select-option"id='Africa/Banjul'>Africa/Banjul</div>
+                <div class="select-option"id='Africa/Bissau'>Africa/Bissau</div>
+                <div class="select-option"id='Africa/Blantyre'>Africa/Blantyre</div>
+                <div class="select-option"id='Africa/Brazzaville'>Africa/Brazzaville</div>
+                <div class="select-option"id='Africa/Bujumbura'>Africa/Bujumbura</div>
+                <div class="select-option"id='Africa/Cairo'>Africa/Cairo</div>
+                <div class="select-option"id='Africa/Casablanca'>Africa/Casablanca</div>
+                <div class="select-option"id='Africa/Ceuta'>Africa/Ceuta</div>
+                <div class="select-option"id='Africa/Conakry'>Africa/Conakry</div>
+                <div class="select-option"id='Africa/Dakar'>Africa/Dakar</div>
+                <div class="select-option"id='Africa/Dar_es_Salaam'>Africa/Dar_es_Salaam</div>
+                <div class="select-option"id='Africa/Djibouti'>Africa/Djibouti</div>
+                <div class="select-option"id='Africa/Douala'>Africa/Douala</div>
+                <div class="select-option"id='Africa/El_Aaiun'>Africa/El_Aaiun</div>
+                <div class="select-option"id='Africa/Freetown'>Africa/Freetown</div>
+                <div class="select-option"id='Africa/Gaborone'>Africa/Gaborone</div>
+                <div class="select-option"id='Africa/Harare'>Africa/Harare</div>
+                <div class="select-option"id='Africa/Johannesburg'>Africa/Johannesburg</div>
+                <div class="select-option"id='Africa/Kampala'>Africa/Kampala</div>
+                <div class="select-option"id='Africa/Khartoum'>Africa/Khartoum</div>
+                <div class="select-option"id='Africa/Kigali'>Africa/Kigali</div>
+                <div class="select-option"id='Africa/Kinshasa'>Africa/Kinshasa</div>
+                <div class="select-option"id='Africa/Lagos'>Africa/Lagos</div>
+                <div class="select-option"id='Africa/Libreville'>Africa/Libreville</div>
+                <div class="select-option"id='Africa/Lome'>Africa/Lome</div>
+                <div class="select-option"id='Africa/Luanda'>Africa/Luanda</div>
+                <div class="select-option"id='Africa/Lubumbashi'>Africa/Lubumbashi</div>
+                <div class="select-option"id='Africa/Lusaka'>Africa/Lusaka</div>
+                <div class="select-option"id='Africa/Malabo'>Africa/Malabo</div>
+                <div class="select-option"id='Africa/Maputo'>Africa/Maputo</div>
+                <div class="select-option"id='Africa/Maseru'>Africa/Maseru</div>
+                <div class="select-option"id='Africa/Mbabane'>Africa/Mbabane</div>
+                <div class="select-option"id='Africa/Mogadishu'>Africa/Mogadishu</div>
+                <div class="select-option"id='Africa/Monrovia'>Africa/Monrovia</div>
+                <div class="select-option"id='Africa/Nairobi'>Africa/Nairobi</div>
+                <div class="select-option"id='Africa/Ndjamena'>Africa/Ndjamena</div>
+                <div class="select-option"id='Africa/Niamey'>Africa/Niamey</div>
+                <div class="select-option"id='Africa/Nouakchott'>Africa/Nouakchott</div>
+                <div class="select-option"id='Africa/Ouagadougou'>Africa/Ouagadougou</div>
+                <div class="select-option"id='Africa/Porto-Novo'>Africa/Porto-Novo</div>
+                <div class="select-option"id='Africa/Sao_Tome'>Africa/Sao_Tome</div>
+                <div class="select-option"id='Africa/Timbuktu'>Africa/Timbuktu</div>
+                <div class="select-option"id='Africa/Tripoli'>Africa/Tripoli</div>
+                <div class="select-option"id='Africa/Tunis'>Africa/Tunis</div>
+                <div class="select-option"id='Africa/Windhoek'>Africa/Windhoek</div>
+                <div class="select-option"id='America/Adak'>America/Adak</div>
+                <div class="select-option"id='America/Anchorage'>America/Anchorage</div>
+                <div class="select-option"id='America/Anguilla'>America/Anguilla</div>
+                <div class="select-option"id='America/Antigua'>America/Antigua</div>
+                <div class="select-option"id='America/Araguaina'>America/Araguaina</div>
+                <div class="select-option"id='America/Argentina/Buenos_Aires'>America/Argentina/Buenos_Aires</div>
+                <div class="select-option"id='America/Argentina/Catamarca'>America/Argentina/Catamarca</div>
+                <div class="select-option"id='America/Argentina/ComodRivadavia'>America/Argentina/ComodRivadavia</div>
+                <div class="select-option"id='America/Argentina/Cordoba'>America/Argentina/Cordoba</div>
+                <div class="select-option"id='America/Argentina/Jujuy'>America/Argentina/Jujuy</div>
+                <div class="select-option"id='America/Argentina/La_Rioja'>America/Argentina/La_Rioja</div>
+                <div class="select-option"id='America/Argentina/Mendoza	'>America/Argentina/Mendoza</div>
+                <div class="select-option"id='America/Argentina/Rio_Gallegos'>America/Argentina/Rio_Gallegos</div>
+                <div class="select-option"id='America/Argentina/Salta'>America/Argentina/Salta</div>
+                <div class="select-option"id='America/Argentina/San_Juan'>America/Argentina/San_Juan</div>
+                <div class="select-option"id='America/Argentina/San_Luis'>America/Argentina/San_Luis</div>
+                <div class="select-option"id='America/Argentina/Tucuman'>America/Argentina/Tucuman</div>
+                <div class="select-option"id='America/Argentina/Ushuaia'>America/Argentina/Ushuaia</div>
+                <div class="select-option"id='America/Aruba'>America/Aruba</div>
+                <div class="select-option"id='America/Asuncion'>America/Asuncion</div>
+                <div class="select-option"id='America/Atikokan'>America/Atikokan</div>
+                <div class="select-option"id='America/Atka'>America/Atka</div>
+                <div class="select-option"id='America/Bahia'>America/Bahia</div>
+                <div class="select-option"id='America/Barbados'>America/Barbados</div>
+                <div class="select-option"id='America/Belem'>America/Belem</div>
+                <div class="select-option"id='America/Belize'>America/Belize</div>
+                <div class="select-option"id='America/Blanc-Sablon'>America/Blanc-Sablon</div>
+                <div class="select-option"id='America/Boa_Vista'>America/Boa_Vista</div>
+                <div class="select-option"id='America/Bogota'>America/Bogota</div>
+                <div class="select-option"id='America/Boise'>America/Boise</div>
+                <div class="select-option"id='America/Buenos_Aires'>America/Buenos_Aires</div>
+                <div class="select-option"id='America/Cambridge_Bay'>America/Cambridge_Bay</div>
+                <div class="select-option"id='America/Campo_Grande'>America/Campo_Grande</div>
+                <div class="select-option"id='America/Cancun'>America/Cancun</div>
+                <div class="select-option"id='America/Caracas'>America/Caracas</div>
+                <div class="select-option"id='America/Catamarca'>America/Catamarca</div>
+                <div class="select-option"id='America/Cayenne'>America/Cayenne</div>
+                <div class="select-option"id='America/Cayman'>America/Cayman</div>
+                <div class="select-option"id='America/Chicago'>America/Chicago</div>
+                <div class="select-option"id='America/Chihuahua'>America/Chihuahua</div>
+                <div class="select-option"id='America/Coral_Harbour'>America/Coral_Harbour</div>
+                <div class="select-option"id='America/Cordoba'>America/Cordoba</div>
+                <div class="select-option"id='America/Costa_Rica'>America/Costa_Rica</div>
+                <div class="select-option"id='America/Cuiaba'>America/Cuiaba</div>
+                <div class="select-option"id='America/Curacao'>America/Curacao</div>
+                <div class="select-option"id='America/Danmarkshavn'>America/Danmarkshavn</div>
+                <div class="select-option"id='America/Dawson'>America/Dawson</div>
+                <div class="select-option"id='America/Dawson_Creek'>America/Dawson_Creek</div>
+                <div class="select-option"id='America/Denver'>America/Denver</div>
+                <div class="select-option"id='America/Detroit'>America/Detroit</div>
+                <div class="select-option"id='America/Dominica'>America/Dominica</div>
+                <div class="select-option"id='America/Edmonton'>America/Edmonton</div>
+                <div class="select-option"id='America/Eirunepe'>America/Eirunepe</div>
+                <div class="select-option"id='America/El_Salvador'>America/El_Salvador</div>
+                <div class="select-option"id='America/Ensenada'>America/Ensenada</div>
+                <div class="select-option"id='America/Fort_Wayne'>America/Fort_Wayne</div>
+                <div class="select-option"id='America/Fortaleza'>America/Fortaleza</div>
+                <div class="select-option"id='America/Glace_Bay'>America/Glace_Bay</div>
+                <div class="select-option"id='America/Godthab'>America/Godthab</div>
+                <div class="select-option"id='America/Goose_Bay'>America/Goose_Bay</div>
+                <div class="select-option"id='America/Grand_Turk'>America/Grand_Turk</div>
+                <div class="select-option"id='America/Grenada'>America/Grenada</div>
+                <div class="select-option"id='America/Guadeloupe'>America/Guadeloupe</div>
+                <div class="select-option"id='America/Guatemala'>America/Guatemala</div>
+                <div class="select-option"id='America/Guayaquil'>America/Guayaquil</div>
+                <div class="select-option"id='America/Guyana'>America/Guyana</div>
+                <div class="select-option"id='America/Halifax'>America/Halifax</div>
+                <div class="select-option"id='America/Havana'>America/Havana</div>
+                <div class="select-option"id='America/Hermosillo'>America/Hermosillo</div>
+                <div class="select-option"id='America/Indiana/Indianapolis'>America/Indiana/Indianapolis</div>
+                <div class="select-option"id='America/Indiana/Knox'>America/Indiana/Knox</div>
+                <div class="select-option"id='America/Indiana/Marengo'>America/Indiana/Marengo</div>
+                <div class="select-option"id='America/Indiana/Petersburg'>America/Indiana/Petersburg</div>
+                <div class="select-option"id='America/Indiana/Tell_City'>America/Indiana/Tell_City</div>
+                <div class="select-option"id='America/Indiana/Vevay'>America/Indiana/Vevay</div>
+                <div class="select-option"id='America/Indiana/Vincennes'>America/Indiana/Vincennes</div>
+                <div class="select-option"id='America/Indiana/Winamac'>America/Indiana/Winamac</div>
+                <div class="select-option"id='America/Indianapolis'>America/Indianapolis</div>
+                <div class="select-option"id='America/Inuvik'>America/Inuvik</div>
+                <div class="select-option"id='America/Iqaluit'>America/Iqaluit</div>
+                <div class="select-option"id='America/Jamaica'>America/Jamaica</div>
+                <div class="select-option"id='America/Jujuy'>America/Jujuy</div>
+                <div class="select-option"id='America/Juneau'>America/Juneau</div>
+                <div class="select-option"id='America/Kentucky/Louisville'>America/Kentucky/Louisville</div>
+                <div class="select-option"id='America/Kentucky/Monticello'>America/Kentucky/Monticello</div>
+                <div class="select-option"id='America/Knox_IN'>America/Knox_IN</div>
+                <div class="select-option"id='America/La_Paz'>America/La_Paz</div>
+                <div class="select-option"id='America/Lima'>America/Lima</div>
+                <div class="select-option"id='America/Los_Angeles'>America/Los_Angeles</div>
+                <div class="select-option"id='America/Louisville'>America/Louisville</div>
+                <div class="select-option"id='America/Maceio'>America/Maceio</div>
+                <div class="select-option"id='America/Managua'>America/Managua</div>
+                <div class="select-option"id='America/Manaus'>America/Manaus</div>
+                <div class="select-option"id='America/Marigot'>America/Marigot</div>
+                <div class="select-option"id='America/Martinique'>America/Martinique</div>
+                <div class="select-option"id='America/Matamoros'>America/Matamoros</div>
+                <div class="select-option"id='America/Mazatlan'>America/Mazatlan</div>
+                <div class="select-option"id='America/Mendoza'>America/Mendoza</div>
+                <div class="select-option"id='America/Menominee'>America/Menominee</div>
+                <div class="select-option"id='America/Merida'>America/Merida</div>
+                <div class="select-option"id='America/Mexico_City'>America/Mexico_City</div>
+                <div class="select-option"id='America/Miquelon'>America/Miquelon</div>
+                <div class="select-option"id='America/Moncton'>America/Moncton</div>
+                <div class="select-option"id='America/Monterrey'>America/Monterrey</div>
+                <div class="select-option"id='America/Montevideo'>America/Montevideo</div>
+                <div class="select-option"id='America/Montreal'>America/Montreal</div>
+                <div class="select-option"id='America/Montserrat'>America/Montserrat</div>
+                <div class="select-option"id='America/Nassau'>America/Nassau</div>
+                <div class="select-option"id='America/New_York'>America/New_York</div>
+                <div class="select-option"id='America/Nipigon'>America/Nipigon</div>
+                <div class="select-option"id='America/Nome'>America/Nome</div>
+                <div class="select-option"id='America/Noronha'>America/Noronha</div>
+                <div class="select-option"id='America/North_Dakota/Center'>America/North_Dakota/Center</div>
+                <div class="select-option"id='America/North_Dakota/New_Salem'>America/North_Dakota/New_Salem</div>
+                <div class="select-option"id='America/Ojinaga'>America/Ojinaga</div>
+                <div class="select-option"id='America/Panama'>America/Panama</div>
+                <div class="select-option"id='America/Pangnirtung'>America/Pangnirtung</div>
+                <div class="select-option"id='America/Paramaribo'>America/Paramaribo</div>
+                <div class="select-option"id='America/Phoenix'>America/Phoenix</div>
+                <div class="select-option"id='America/Port-au-Prince'>America/Port-au-Prince</div>
+                <div class="select-option"id='America/Port_of_Spain	'>America/Port_of_Spain</div>
+                <div class="select-option"id='America/Porto_Acre'>America/Porto_Acre</div>
+                <div class="select-option"id='America/Porto_Velho'>America/Porto_Velho</div>
+                <div class="select-option"id='America/Puerto_Rico'>America/Puerto_Rico</div>
+                <div class="select-option"id='America/Rainy_River'>America/Rainy_River</div>
+                <div class="select-option"id='America/Rankin_Inlet'>America/Rankin_Inlet</div>
+                <div class="select-option"id='America/Recife'>America/Recife</div>
+                <div class="select-option"id='America/Regina'>America/Regina</div>
+                <div class="select-option"id='America/Resolute'>America/Resolute</div>
+                <div class="select-option"id='America/Rio_Branco'>America/Rio_Branco</div>
+                <div class="select-option"id='America/Rosario'>America/Rosario</div>
+                <div class="select-option"id='America/Santa_Isabel'>America/Santa_Isabel</div>
+                <div class="select-option"id='America/Santarem'>America/Santarem</div>
+                <div class="select-option"id='America/Santiago'>America/Santiago</div>
+                <div class="select-option"id='America/Santo_Domingo'>America/Santo_Domingo</div>
+                <div class="select-option"id='America/Sao_Paulo'>America/Sao_Paulo</div>
+                <div class="select-option"id='America/Scoresbysund'>America/Scoresbysund</div>
+                <div class="select-option"id='America/Shiprock'>America/Shiprock</div>
+                <div class="select-option"id='America/St_Barthelemy'>America/St_Barthelemy</div>
+                <div class="select-option"id='America/St_Johns'>America/St_Johns</div>
+                <div class="select-option"id='America/St_Kitts'>America/St_Kitts</div>
+                <div class="select-option"id='America/St_Lucia'>America/St_Lucia</div>
+                <div class="select-option"id='America/St_Thomas'>America/St_Thomas</div>
+                <div class="select-option"id='America/St_Vincent'>America/St_Vincent</div>
+                <div class="select-option"id='America/Swift_Current'>America/Swift_Current</div>
+                <div class="select-option"id='America/Tegucigalpa'>America/Tegucigalpa</div>
+                <div class="select-option"id='America/Thule	'>America/Thule	</div>
+                <div class="select-option"id='America/Thunder_Bay'>America/Thunder_Bay</div>
+                <div class="select-option"id='America/Tijuana'>America/Tijuana</div>
+                <div class="select-option"id='America/Toronto'>America/Toronto</div>
+                <div class="select-option"id='America/Tortola'>America/Tortola</div>
+                <div class="select-option"id='America/Vancouver'>America/Vancouver</div>
+                <div class="select-option"id='America/Virgin'>America/Virgin</div>
+                <div class="select-option"id='America/Whitehorse'>America/Whitehorse</div>
+                <div class="select-option"id='America/Winnipeg'>America/Winnipeg</div>
+                <div class="select-option"id='America/Yakutat'>America/Yakutat</div>
+                <div class="select-option"id='America/Yellowknife'>America/Yellowknife</div>
+                <div class="select-option"id='Antarctica/Casey'>Antarctica/Casey</div>
+                <div class="select-option"id='Antarctica/Davis'>Antarctica/Davis</div>
+                <div class="select-option"id='Antarctica/DumontDUrville'>Antarctica/DumontDUrville</div>
+                <div class="select-option"id='Antarctica/Macquarie'>Antarctica/Macquarie</div>
+                <div class="select-option"id='Antarctica/Mawson'>Antarctica/Mawson</div>
+                <div class="select-option"id='Antarctica/McMurdo'>Antarctica/McMurdo</div>
+                <div class="select-option"id='Antarctica/Palmer'>Antarctica/Palmer</div>
+                <div class="select-option"id='Antarctica/Rothera'>Antarctica/Rothera</div>
+                <div class="select-option"id='Antarctica/South_Pole'>Antarctica/South_Pole</div>
+                <div class="select-option"id='Antarctica/Syowa'>Antarctica/Syowa</div>
+                <div class="select-option"id='Antarctica/Vostok'>Antarctica/Vostok</div>
+                <div class="select-option"id='Arctic/Longyearbyen'>Arctic/Longyearbyen</div>
+                <div class="select-option"id='Asia/Aden	'>Asia/Aden</div>
+                <div class="select-option"id='Asia/Almaty'>Asia/Almaty</div>
+                <div class="select-option"id='Asia/Amman'>Asia/Amman</div>
+                <div class="select-option"id='Asia/Anadyr'>Asia/Anadyr</div>
+                <div class="select-option"id='Asia/Aqtau'>Asia/Aqtau</div>
+                <div class="select-option"id='Asia/Aqtobe'>Asia/Aqtobe</div>
+                <div class="select-option"id='Asia/Ashgabat'>Asia/Ashgabat</div>
+                <div class="select-option"id='Asia/Ashkhabad'>Asia/Ashkhabad</div>
+                <div class="select-option"id='Asia/Baghdad'>Asia/Baghdad</div>
+                <div class="select-option"id='Asia/Bahrain'>Asia/Bahrain</div>
+                <div class="select-option"id='Asia/Baku'>Asia/Baku</div>
+                <div class="select-option"id='Asia/Bangkok'>Asia/Bangkok</div>
+                <div class="select-option"id='Asia/Beirut'>Asia/Beirut</div>
+                <div class="select-option"id='Asia/Bishkek'>Asia/Bishkek</div>
+                <div class="select-option"id='Asia/Brunei'>Asia/Brunei</div>
+                <div class="select-option"id='Asia/Calcutta'>Asia/Calcutta</div>
+                <div class="select-option"id='Asia/Choibalsan'>Asia/Choibalsan</div>
+                <div class="select-option"id='Asia/Chongqing'>Asia/Chongqing</div>
+                <div class="select-option"id='Asia/Chungking'>Asia/Chungking</div>
+                <div class="select-option"id='Asia/Colombo'>Asia/Colombo</div>
+                <div class="select-option"id='Asia/Dacca'>Asia/Dacca</div>
+                <div class="select-option"id='Asia/Damascus'>Asia/Damascus</div>
+                <div class="select-option"id='Asia/Dhaka'>Asia/Dhaka</div>
+                <div class="select-option"id='Asia/Dili'>Asia/Dili</div>
+                <div class="select-option"id='Asia/Dubai'>Asia/Dubai</div>
+                <div class="select-option"id='Asia/Dushanbe'>Asia/Dushanbe</div>
+                <div class="select-option"id='Asia/Gaza'>Asia/Gaza</div>
+                <div class="select-option"id='Asia/Harbin'>Asia/Harbin</div>
+                <div class="select-option"id='Asia/Ho_Chi_Minh'>Asia/Ho_Chi_Minh</div>
+                <div class="select-option"id='Asia/Hong_Kong'>Asia/Hong_Kong</div>
+                <div class="select-option"id='Asia/Hovd'>Asia/Hovd</div>
+                <div class="select-option"id='Asia/Irkutsk'>Asia/Irkutsk</div>
+                <div class="select-option"id='Asia/Istanbul'>Asia/Istanbul</div>
+                <div class="select-option"id='Asia/Jakarta'>Asia/Jakarta</div>
+                <div class="select-option"id='Asia/Jayapura'>Asia/Jayapura</div>
+                <div class="select-option"id='Asia/Jerusalem'>Asia/Jerusalem</div>
+                <div class="select-option"id='Asia/Kabul'>Asia/Kabul</div>
+                <div class="select-option"id='Asia/Kamchatka'>Asia/Kamchatka</div>
+                <div class="select-option"id='Asia/Karachi'>Asia/Karachi</div>
+                <div class="select-option"id='Asia/Kashgar'>Asia/Kashgar</div>
+                <div class="select-option"id='Asia/Kathmandu'>Asia/Kathmandu</div>
+                <div class="select-option"id='Asia/Katmandu'>Asia/Katmandu</div>
+                <div class="select-option"id='Asia/Kolkata'>Asia/Kolkata</div>
+                <div class="select-option"id='Asia/Krasnoyarsk'>Asia/Krasnoyarsk</div>
+                <div class="select-option"id='Asia/Kuala_Lumpur'>Asia/Kuala_Lumpur</div>
+                <div class="select-option"id='Asia/Kuching'>Asia/Kuching</div>
+                <div class="select-option"id='Asia/Kuwait'>Asia/Kuwait</div>
+                <div class="select-option"id='Asia/Macao'>Asia/Macao</div>
+                <div class="select-option"id='Asia/Macau'>Asia/Macau</div>
+                <div class="select-option"id='Asia/Magadan'>Asia/Magadan</div>
+                <div class="select-option"id='Asia/Makassar'>Asia/Makassar</div>
+                <div class="select-option"id='Asia/Manila'>Asia/Manila</div>
+                <div class="select-option"id='Asia/Muscat'>Asia/Muscat</div>
+                <div class="select-option"id='Asia/Nicosia'>Asia/Nicosia</div>
+                <div class="select-option"id='Asia/Novokuznetsk'>Asia/Novokuznetsk</div>
+                <div class="select-option"id='Asia/Novosibirsk'>Asia/Novosibirsk</div>
+                <div class="select-option"id='Asia/Omsk'>Asia/Omsk</div>
+                <div class="select-option"id='Asia/Oral'>Asia/Oral</div>
+                <div class="select-option"id='Asia/Phnom_Penh'>Asia/Phnom_Penh</div>
+                <div class="select-option"id='Asia/Pontianak'>Asia/Pontianak</div>
+                <div class="select-option"id='Asia/Pyongyang'>Asia/Pyongyang</div>
+                <div class="select-option"id='Asia/Qatar'>Asia/Qatar</div>
+                <div class="select-option"id='Asia/Qyzylorda'>Asia/Qyzylorda</div>
+                <div class="select-option"id='Asia/Rangoon'>Asia/Rangoon</div>
+                <div class="select-option"id='Asia/Riyadh'>Asia/Riyadh</div>
+                <div class="select-option"id='Asia/Saigon'>Asia/Saigon</div>
+                <div class="select-option"id='Asia/Sakhalin'>Asia/Sakhalin</div>
+                <div class="select-option"id='Asia/Samarkand'>Asia/Samarkand</div>
+                <div class="select-option"id='Asia/Seoul'>Asia/Seoul</div>
+                <div class="select-option"id='Asia/Shanghai'>Asia/Shanghai</div>
+                <div class="select-option"id='Asia/Singapore'>Asia/Singapore</div>
+                <div class="select-option"id='Asia/Taipei'>Asia/Taipei</div>
+                <div class="select-option"id='Asia/Tashkent'>Asia/Tashkent</div>
+                <div class="select-option"id='Asia/Tbilisi'>Asia/Tbilisi</div>
+                <div class="select-option"id='Asia/Tehran'>Asia/Tehran</div>
+                <div class="select-option"id='Asia/Tel_Aviv'>Asia/Tel_Aviv</div>
+                <div class="select-option"id='Asia/Thimbu'>Asia/Thimbu</div>
+                <div class="select-option"id='Asia/Thimphu'>Asia/Thimphu</div>
+                <div class="select-option"id='Asia/Tokyo'>Asia/Tokyo</div>
+                <div class="select-option"id='Asia/Ujung_Pandang'>Asia/Ujung_Pandang</div>
+                <div class="select-option"id='Asia/Ulaanbaatar'>Asia/Ulaanbaatar</div>
+                <div class="select-option"id='Asia/Ulan_Bator'>Asia/Ulan_Bator</div>
+                <div class="select-option"id='Asia/Urumqi'>Asia/Urumqi</div>
+                <div class="select-option"id='Asia/Vientiane'>Asia/Vientiane</div>
+                <div class="select-option"id='Asia/Vladivostok'>Asia/Vladivostok</div>
+                <div class="select-option"id='Asia/Yakutsk'>Asia/Yakutsk</div>
+                <div class="select-option"id='Asia/Yekaterinburg'>Asia/Yekaterinburg</div>
+                <div class="select-option"id='Asia/Yerevan'>Asia/Yerevan</div>
+                <div class="select-option"id='Atlantic/Azores'>Atlantic/Azores</div>
+                <div class="select-option"id='Atlantic/Bermuda'>Atlantic/Bermuda</div>
+                <div class="select-option"id='Atlantic/Canary'>Atlantic/Canary</div>
+                <div class="select-option"id='Atlantic/Cape_Verde'>Atlantic/Cape_Verde</div>
+                <div class="select-option"id='Atlantic/Faeroe'>Atlantic/Faeroe</div>
+                <div class="select-option"id='Atlantic/Faroe'>Atlantic/Faroe</div>
+                <div class="select-option"id='Atlantic/Jan_Mayen'>Atlantic/Jan_Mayen</div>
+                <div class="select-option"id='Atlantic/Madeira'>Atlantic/Madeira</div>
+                <div class="select-option"id='Atlantic/Reykjavik'>Atlantic/Reykjavik</div>
+                <div class="select-option"id='Atlantic/South_Georgia'>Atlantic/South_Georgia</div>
+                <div class="select-option"id='Atlantic/St_Helena'>Atlantic/St_Helena</div>
+                <div class="select-option"id='Atlantic/Stanley'>Atlantic/Stanley</div>
+                <div class="select-option"id='Australia/ACT	'>Australia/ACT	</div>
+                <div class="select-option"id='Australia/Adelaide'>Australia/Adelaide</div>
+                <div class="select-option"id='Australia/Brisbane'>Australia/Brisbane</div>
+                <div class="select-option"id='Australia/Broken_Hill'>Australia/Broken_Hill</div>
+                <div class="select-option"id='Australia/Canberra'>Australia/Canberra</div>
+                <div class="select-option"id='Australia/Currie'>Australia/Currie</div>
+                <div class="select-option"id='Australia/Darwin'>Australia/Darwin</div>
+                <div class="select-option"id='Australia/Eucla'>Australia/Eucla</div>
+                <div class="select-option"id='Australia/Hobart'>Australia/Hobart</div>
+                <div class="select-option"id='Australia/LHI'>Australia/LHI</div>
+                <div class="select-option"id='Australia/Lindeman'>Australia/Lindeman</div>
+                <div class="select-option"id='Australia/Lord_Howe'>Australia/Lord_Howe</div>
+                <div class="select-option"id='Australia/Melbourne'>Australia/Melbourne</div>
+                <div class="select-option"id='Australia/North'>Australia/North</div>
+                <div class="select-option"id='Australia/NSW'>Australia/NSW</div>
+                <div class="select-option"id='Australia/Perth'>Australia/Perth</div>
+                <div class="select-option"id='Australia/Queensland'>Australia/Queensland</div>
+                <div class="select-option"id='Australia/South'>Australia/South</div>
+                <div class="select-option"id='Australia/Sydney'>Australia/Sydney</div>
+                <div class="select-option"id='Australia/Tasmania'>Australia/Tasmania</div>
+                <div class="select-option"id='Australia/Victoria'>Australia/Victoria</div>
+                <div class="select-option"id='Australia/West'>Australia/West</div>
+                <div class="select-option"id='Australia/Yancowinna'>Australia/Yancowinna</div>
+                <div class="select-option"id='Europe/Amsterdam'>Europe/Amsterdam</div>
+                <div class="select-option"id='Europe/Andorra'>Europe/Andorra</div>
+                <div class="select-option"id='Europe/Athens'>Europe/Athens</div>
+                <div class="select-option"id='Europe/Belfast'>Europe/Belfast</div>
+                <div class="select-option"id='Europe/Belgrade'>Europe/Belgrade</div>
+                <div class="select-option"id='Europe/Berlin'>Europe/Berlin</div>
+                <div class="select-option"id='Europe/Bratislava'>Europe/Bratislava</div>
+                <div class="select-option"id='Europe/Brussels'>Europe/Brussels</div>
+                <div class="select-option"id='Europe/Bucharest'>Europe/Bucharest</div>
+                <div class="select-option"id='Europe/Budapest'>Europe/Budapest</div>
+                <div class="select-option"id='Europe/Chisinau'>Europe/Chisinau</div>
+                <div class="select-option"id='Europe/Copenhagen'>Europe/Copenhagen</div>
+                <div class="select-option"id='Europe/Dublin'>Europe/Dublin</div>
+                <div class="select-option"id='Europe/Gibraltar'>Europe/Gibraltar</div>
+                <div class="select-option"id='Europe/Guernsey'>Europe/Guernsey</div>
+                <div class="select-option"id='Europe/Helsinki'>Europe/Helsinki</div>
+                <div class="select-option"id='Europe/Isle_of_Man'>Europe/Isle_of_Man</div>
+                <div class="select-option"id='Europe/Istanbul'>Europe/Istanbul</div>
+                <div class="select-option"id='Europe/Jersey'>Europe/Jersey</div>
+                <div class="select-option"id='Europe/Kaliningrad'>Europe/Kaliningrad</div>
+                <div class="select-option"id='Europe/Kiev'>Europe/Kiev</div>
+                <div class="select-option"id='Europe/Lisbon'>Europe/Lisbon</div>
+                <div class="select-option"id='Europe/Ljubljana'>Europe/Ljubljana</div>
+                <div class="select-option"id='Europe/London'>Europe/London</div>
+                <div class="select-option"id='Europe/Luxembourg'>Europe/Luxembourg</div>
+                <div class="select-option"id='Europe/Madrid'>Europe/Madrid</div>
+                <div class="select-option"id='Europe/Malta'>Europe/Malta</div>
+                <div class="select-option"id='Europe/Mariehamn'>Europe/Mariehamn</div>
+                <div class="select-option"id='Europe/Minsk'>Europe/Minsk</div>
+                <div class="select-option"id='Europe/Monaco'>Europe/Monaco</div>
+                <div class="select-option"id='Europe/Moscow'>Europe/Moscow</div>
+                <div class="select-option"id='Europe/Nicosia'>Europe/Nicosia</div>
+                <div class="select-option"id='Europe/Oslo'>Europe/Oslo</div>
+                <div class="select-option"id='Europe/Paris'>Europe/Paris</div>
+                <div class="select-option"id='Europe/Podgorica'>Europe/Podgorica</div>
+                <div class="select-option"id='Europe/Prague'>Europe/Prague</div>
+                <div class="select-option"id='Europe/Riga'>Europe/Riga</div>
+                <div class="select-option"id='Europe/Rome'>Europe/Rome</div>
+                <div class="select-option"id='Europe/Samara'>Europe/Samara</div>
+                <div class="select-option"id='Europe/San_Marino'>Europe/San_Marino</div>
+                <div class="select-option"id='Europe/Sarajevo'>Europe/Sarajevo</div>
+                <div class="select-option"id='Europe/Simferopol'>Europe/Simferopol</div>
+                <div class="select-option"id='Europe/Skopje'>Europe/Skopje</div>
+                <div class="select-option"id='Europe/Sofia'>Europe/Sofia</div>
+                <div class="select-option"id='Europe/Stockholm'>Europe/Stockholm</div>
+                <div class="select-option"id='Europe/Tallinn'>Europe/Tallinn</div>
+                <div class="select-option"id='Europe/Tirane'>Europe/Tirane</div>
+                <div class="select-option"id='Europe/Tiraspol'>Europe/Tiraspol</div>
+                <div class="select-option"id='Europe/Uzhgorod'>Europe/Uzhgorod</div>
+                <div class="select-option"id='Europe/Vaduz'>Europe/Vaduz</div>
+                <div class="select-option"id='Europe/Vatican'>Europe/Vatican</div>
+                <div class="select-option"id='Europe/Vienna'>Europe/Vienna</div>
+                <div class="select-option"id='Europe/Vilnius'>Europe/Vilnius</div>
+                <div class="select-option"id='Europe/Volgograd'>Europe/Volgograd</div>
+                <div class="select-option"id='Europe/Warsaw'>Europe/Warsaw</div>
+                <div class="select-option"id='Europe/Zagreb'>Europe/Zagreb</div>
+                <div class="select-option"id='Europe/Zaporozhye'>Europe/Zaporozhye</div>
+                <div class="select-option"id='Europe/Zurich'>Europe/Zurich</div>
+                <div class="select-option"id='Indian/Antananarivo'>Indian/Antananarivo</div>
+                <div class="select-option"id='Indian/Chagos'>Indian/Chagos</div>
+                <div class="select-option"id='Indian/Christmas'>Indian/Christmas</div>
+                <div class="select-option"id='Indian/Cocos'>Indian/Cocos</div>
+                <div class="select-option"id='Indian/Comoro'>Indian/Comoro</div>
+                <div class="select-option"id='Indian/Kerguelen'>Indian/Kerguelen</div>
+                <div class="select-option"id='Indian/Mahe'>Indian/Mahe</div>
+                <div class="select-option"id='Indian/Maldives'>Indian/Maldives</div>
+                <div class="select-option"id='Indian/Mauritius'>Indian/Mauritius</div>
+                <div class="select-option"id='Indian/Mayotte'>Indian/Mayotte</div>
+                <div class="select-option"id='Indian/Reunion'>Indian/Reunion</div>
+                <div class="select-option"id='Pacific/Apia'>Pacific/Apia</div>
+                <div class="select-option"id='Pacific/Auckland'>Pacific/Auckland</div>
+                <div class="select-option"id='Pacific/Chatham'>Pacific/Chatham</div>
+                <div class="select-option"id='Pacific/Easter'>Pacific/Easter</div>
+                <div class="select-option"id='Pacific/Efate'>Pacific/Efate</div>
+                <div class="select-option"id='Pacific/Enderbury'>Pacific/Enderbury</div>
+                <div class="select-option"id='Pacific/Fakaofo'>Pacific/Fakaofo</div>
+                <div class="select-option"id='Pacific/Fiji'>Pacific/Fiji</div>
+                <div class="select-option"id='Pacific/Funafuti'>Pacific/Funafuti</div>
+                <div class="select-option"id='Pacific/Galapagos'>Pacific/Galapagos</div>
+                <div class="select-option"id='Pacific/Gambier'>Pacific/Gambier</div>
+                <div class="select-option"id='Pacific/Guadalcanal'>Pacific/Guadalcanal</div>
+                <div class="select-option"id='Pacific/Guam'>Pacific/Guam</div>
+                <div class="select-option"id='Pacific/Honolulu'>Pacific/Honolulu</div>
+                <div class="select-option"id='Pacific/Johnston'>Pacific/Johnston</div>
+                <div class="select-option"id='Pacific/Kiritimati'>Pacific/Kiritimati</div>
+                <div class="select-option"id='Pacific/Kosrae'>Pacific/Kosrae</div>
+                <div class="select-option"id='Pacific/Kwajalein'>Pacific/Kwajalein</div>
+                <div class="select-option"id='Pacific/Majuro'>Pacific/Majuro</div>
+                <div class="select-option"id='Pacific/Marquesas'>Pacific/Marquesas</div>
+                <div class="select-option"id='Pacific/Midway'>Pacific/Midway</div>
+                <div class="select-option"id='Pacific/Nauru'>Pacific/Nauru</div>
+                <div class="select-option"id='Pacific/Niue'>Pacific/Niue</div>
+                <div class="select-option"id='Pacific/Norfolk'>Pacific/Norfolk</div>
+                <div class="select-option"id='Pacific/Noumea'>Pacific/Noumea</div>
+                <div class="select-option"id='Pacific/Pago_Pago'>Pacific/Pago_Pago</div>
+                <div class="select-option"id='Pacific/Palau'>Pacific/Palau</div>
+                <div class="select-option"id='Pacific/Pitcairn'>Pacific/Pitcairn</div>
+                <div class="select-option"id='Pacific/Ponape'>Pacific/Ponape</div>
+                <div class="select-option"id='Pacific/Port_Moresby'>Pacific/Port_Moresby</div>
+                <div class="select-option"id='Pacific/Rarotonga'>Pacific/Rarotonga</div>
+                <div class="select-option"id='Pacific/Saipan'>Pacific/Saipan</div>
+                <div class="select-option"id='Pacific/Samoa'>Pacific/Samoa</div>
+                <div class="select-option"id='Pacific/Tahiti'>Pacific/Tahiti</div>
+                <div class="select-option"id='Pacific/Tarawa'>Pacific/Tarawa</div>
+                <div class="select-option"id='Pacific/Tongatapu'>Pacific/Tongatapu</div>
+                <div class="select-option"id='Pacific/Truk'>Pacific/Truk</div>
+                <div class="select-option"id='Pacific/Wake'>Pacific/Wake</div>
+                <div class="select-option"id='Pacific/Wallis'>Pacific/Wallis</div>
+        </div>
+    </form>
+</div>
+
+        <table id="countrytable" border="1px">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Time</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="countryTable">
+        
+    </tbody>
+        </table>
+        
+        
+        <script>
+                function filterOptions() {
+            const input = document.querySelector('.select-input');
+            const dropdown = document.querySelector('.select-dropdown');
+            const options = dropdown.querySelectorAll('.select-option');
+
+            const filterText = input.value.toLowerCase();
+         
+            options.forEach(option => {
+                const optionText = option.textContent.toLowerCase();
+                if (optionText.includes(filterText)) {
+                    option.style.display = 'block';
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+            if (filterText) {
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+
+           
+        }
+
+        document.addEventListener('click', function (event) {
+            const selectInput = document.querySelector('.select-input');
+            const dropdown = document.querySelector('.select-dropdown');
+
+            if (!selectInput.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'block';
+                selectInput.value = ''; 
+            }
+        }); 
+
+        const selectOptions = document.querySelectorAll('.select-option');
+        selectOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                const selectedValue = this.textContent;
+                document.querySelector('.select-input').value = selectedValue;
+                document.querySelector('.select-dropdown').style.display = 'none'; 
+                addCountryToTable(selectedValue, getTimezone(selectedValue));
+            });
+        });
+
+
+        function updateTimeForAllRows() {
+    const table = document.getElementById('countrytable');
+    const rows = table.rows;
+
+    for (let i = 0; i < rows.length; i++) {
+        const countryCell = rows[i].cells[0];
+        const timeCell = rows[i].cells[1];
+
+        const country = countryCell.textContent.trim();
+        const time = getTimezone(country);
+
+        if (time !== null) {
+            timeCell.textContent = time;
+            console.log(country, time);
+        } else {
+            console.log(`Invalid time zone: ${country}`);
+        }
+    }
+}
+
+function getTimezone(timezone) {
+   
+        const date = new Date().toLocaleString("en-US", { timeZone: timezone });
+        return date;
+   
+}
+
+if (document.getElementById('countrytable').rows.length !== 0) {
+    setInterval(updateTimeForAllRows, 1000);
+}
+
+
+      /*  function timezone() {
+            var timezone = document.querySelector('.select-input').value;
+            var date = new Date().toLocaleString("en-US", { timeZone: timezone });
+            document.getElementById("timez").innerHTML = date;
+        }
+        setInterval(timezone, 1000);*/
+
+
+        function addCountryToTable(country, time) {
+            const table = document.querySelector('#countryTable');
+            const newRow = table.insertRow();
+            const countryCell = newRow.insertCell(0);
+            const timeCell = newRow.insertCell(1);
+            const deleteCell = newRow.insertCell(2);
+            
+            countryCell.textContent = country;
+            timeCell.textContent = time;
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+    
+            deleteCell.appendChild(deleteButton);
+        }
+
+
+        document.querySelector('#countryTable').addEventListener('click', function (event) {
+    if (event.target.tagName === 'BUTTON' && event.target.textContent === 'Delete') {
+        const row = event.target.closest('tr');
+        if (row) {
+            row.remove();
+        }
+    }
+});
+
+    
+
+        </script>
+    </body>
+</html>

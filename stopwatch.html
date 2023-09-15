@@ -1,0 +1,89 @@
+<html>
+    <head><title> Clock Site</title>
+      <link rel="stylesheet" type="text/css" href="Clock app css.css">
+     
+    </head>
+    <body><header>
+        <h1> Clock Site </h1>
+        
+        <nav>
+            <ul>  
+                <li>  
+                <a href="world clock.html"> World Clock </a>  
+                </li>  
+                <li>  
+                <a href="alarm.html"> Alarm </a>  
+                </li>  
+                <li>  
+                <a href="stopwatch.html"> Stopwatch </a>  
+                </li>  
+                <li> <a href="timer.html">  Timer </a>  
+                </li>    
+                </ul>  
+                </nav>  
+        </nav>
+        </header>
+        <div class="wrapper" onload="Timer()">
+            <h1 id="sw">Stopwatch</h1>
+            
+            <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+            <button id="button-start" class="button">Start</button>
+            <button id="button-stop" class="button">Stop</button>
+            <button id="button-reset" class="button">Reset</button>
+            </div> 
+            <script>
+                function Timer() {
+                    var initsec = 0;
+                    var inittens = 0;
+                    var sec = document.getElementById("seconds");
+                    var tens = document.getElementById("tens");
+                    var Start = document.getElementById('button-start');
+                    var Stop = document.getElementById('button-stop');
+                    var Reset = document.getElementById('button-reset');
+                    var int;
+            
+                    Reset.onclick = function () {
+                        clearInterval(int);
+                        inittens = "00";
+                        initsec = "00";
+                        tens.innerHTML = inittens;
+                        sec.innerHTML = initsec;
+                    }
+            
+                    Stop.onclick = function () {
+                        clearInterval(int);
+                    }
+            
+                    Start.onclick = function () {
+                        clearInterval(int);
+                        int = setInterval(startStopwatch, 10);
+                    }
+            
+                    function startStopwatch() {
+                        inittens++;
+            
+                        if (inittens <= 9) {
+                            tens.innerHTML = "0" + inittens;
+                        }
+            
+                        if (inittens > 9) {
+                            tens.innerHTML = inittens;
+                        }
+            
+                        if (inittens > 99) {
+                            initsec++;
+                            sec.innerHTML = "0" + initsec;
+                            inittens = 0;
+                            tens.innerHTML = "00";
+                        }
+            
+                        if (initsec > 9) {
+                            sec.innerHTML = initsec;
+                        }
+                    }
+                }
+                Timer();
+            </script>
+            
+    </body>
+</html>
